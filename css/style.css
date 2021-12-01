@@ -200,8 +200,8 @@ h6 {
 }
 
 .menu__logo img {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .menu__item {
@@ -223,7 +223,7 @@ h6 {
 }
 
 .menu__item a:hover {
-  color: aqua;
+  color: #00897b;
 }
 
 .item-menu__image {
