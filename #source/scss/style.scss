@@ -1,0 +1,411 @@
+// Миксины===================================
+@mixin anim($time, $delay) {
+	-webkit-transition: all $time ease $delay;
+	-moz-transition: all $time ease $delay;
+	-ms-transition: all $time ease $delay;
+	-o-transition: all $time ease $delay;
+	transition: all $time ease $delay;
+}
+
+@mixin anim_cubic($time, $delay) {
+	-webkit-transition: $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-moz-transition: $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-ms-transition: $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	-o-transition: $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+	transition: $time cubic-bezier(0.68, -0.55, 0.265, 1.55) $delay;
+}
+
+@mixin rotate($deg) {
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-webkit-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+@mixin scale($num) {
+	-moz-transform: scale($num);
+	-ms-transform: scale($num);
+	-webkit-transform: scale($num);
+	-o-transform: scale($num);
+	transform: scale($num);
+}
+@mixin skew($num) {
+	-moz-transform: skew($num);
+	-ms-transform: skew($num);
+	-webkit-transform: skew($num);
+	-o-transform: skew($num);
+	transform: skew($num);
+}
+@mixin cnt($h) {
+	display: flex;
+	flex-direction: column;
+	height: $h;
+	text-align: center;
+	align-items: stretch;
+	justify-content: center;
+}
+@mixin tr($x, $y, $z) {
+	transform: translate3d($x, $y, $z);
+}
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	font-size: 0;
+}
+@mixin flexboxonline() {
+	display: -webkit-inline-flex;
+	display: -moz-inline-flex;
+	display: -ms-inline-flex;
+	display: -o-inline-flex;
+	display: inline-flex;
+}
+@mixin flexfolder($val) {
+	-webkit-box-ordinal-group: $val;
+	-moz-box-ordinal-group: $val;
+	-ms-flex-order: $val;
+	-webkit-order: $val;
+	order: $val;
+}
+// Миксины===================================
+
+// ШРИФТЫ====================================
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+// Шрифт по умолчанию========================
+
+$fontfamily: "Lato", sans-serif;
+
+// Шрифт по умолчанию========================
+// ШРИФТЫ====================================
+
+// Переменные================================
+$minwidth: 320px;
+$mw: 1170;
+$md1: $mw + 12;
+$md2: 992.98;
+$md3: 767.98;
+$md4: 479.98;
+// Переменные================================
+
+// Файл обнуляющих стилей====================
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font-family: $fontfamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	&.lock {
+		overflow: hidden;
+		@media (max-width: $md3) {
+			width: 100%;
+			position: fixed;
+			overflow: hidden;
+		}
+	}
+}
+input,
+button,
+textarea {
+	font-family: $fontfamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+// Файл обнуляющих стилей====================
+
+// Оболочка==================================
+.wrapper {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+// Оболочка==================================
+
+// Основная сетка============================
+.ibg {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	opacity: 1;
+}
+
+.ibg img {
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+// Основная сетка===========================
+
+// Основной блок============================
+.content {
+	flex: 1 1 auto;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 220px;
+	height: 70px;
+	border: solid 3px #f8f8f8;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 22px;
+	letter-spacing: 1px;
+	color: #fff;
+	&:hover {
+		background-color: #00897b;
+		border: solid 3px #00897b;
+		transition: 0.5s;
+	}
+}
+
+.menu {
+	&__row {
+		height: 120px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__logo {
+		font-size: 25px;
+		font-weight: 700;
+		line-height: 22px;
+		color: #212121;
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+
+	&__item {
+		width: 700px;
+		display: flex;
+		justify-content: space-between;
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: 1px;
+		a {
+			color: #212121;
+			&:hover {
+				color: aqua;
+			}
+		}
+	}
+}
+
+.item-menu {
+	&__image {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.mainblock {
+	&__img {
+	}
+
+	&__title {
+		padding: 250px 0 50px 0;
+		font-size: 60px;
+		font-weight: 600;
+		letter-spacing: 5px;
+		text-align: center;
+		color: #fff;
+	}
+
+	&__subtitle {
+		font-size: 22px;
+		line-height: 22px;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 110px;
+	}
+
+	&__row {
+		margin: 0 auto;
+		display: flex;
+		max-width: 470px;
+		justify-content: space-between;
+		margin-bottom: 150px;
+	}
+
+	&__btn {
+	}
+
+	&__arrow {
+		display: flex;
+		justify-content: center;
+		padding-bottom: 150px;
+		&::after {
+			content: url(/img/background/arrow.png);
+		}
+	}
+}
+
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 0.73;
+	letter-spacing: 1.5px;
+	text-align: center;
+	color: #212121;
+	margin-bottom: 40px;
+}
+.subtitle {
+	margin: 0 auto;
+	max-width: 620px;
+	font-size: 15px;
+	line-height: 1.47;
+	letter-spacing: 0.75px;
+	text-align: center;
+	color: #212121;
+	margin-bottom: 125px;
+}
+
+.about {
+	margin: 125px 0;
+	&__title {
+	}
+
+	&__subtitle {
+	}
+
+	&__row {
+		display: flex;
+		margin: 0 -5px;
+	}
+
+	&__column {
+		flex: 0 0 33.333%;
+		text-align: center;
+		padding: 0 5px;
+	}
+}
+
+.item-about {
+	&__icon {
+		margin-bottom: 40px;
+	}
+
+	&__title {
+		font-size: 20px;
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: 1px;
+		color: #212121;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		margin: 0 auto;
+		font-size: 15px;
+		max-width: 255px;
+		line-height: 1.47;
+		letter-spacing: 0.75px;
+		text-align: center;
+		color: #212121;
+	}
+}
+
+.footer {
+	height: 65px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&__text {
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 22px;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #212121;
+	}
+}

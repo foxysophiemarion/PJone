@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+@media (max-width: 767.98) {
+  body.lock {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+}
+
+input,
+button,
+textarea {
+  font-family: "Lato", sans-serif;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  opacity: 1;
+}
+
+.ibg img {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 220px;
+  height: 70px;
+  border: solid 3px #f8f8f8;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #00897b;
+  border: solid 3px #00897b;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu__row {
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__logo {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #212121;
+}
+
+.menu__logo img {
+  width: 100px;
+  height: 100px;
+}
+
+.menu__item {
+  width: 700px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.menu__item a {
+  color: #212121;
+}
+
+.menu__item a:hover {
+  color: aqua;
+}
+
+.item-menu__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainblock__title {
+  padding: 250px 0 50px 0;
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-align: center;
+  color: #fff;
+}
+
+.mainblock__subtitle {
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 110px;
+}
+
+.mainblock__row {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 470px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 150px;
+}
+
+.mainblock__arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 150px;
+}
+
+.mainblock__arrow::after {
+  content: url(/img/background/arrow.png);
+}
+
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.73;
+  letter-spacing: 1.5px;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  margin: 0 auto;
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.47;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: #212121;
+  margin-bottom: 125px;
+}
+
+.about {
+  margin: 125px 0;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -5px;
+}
+
+.about__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.333%;
+          flex: 0 0 33.333%;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.item-about__icon {
+  margin-bottom: 40px;
+}
+
+.item-about__title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  color: #212121;
+  margin-bottom: 30px;
+}
+
+.item-about__text {
+  margin: 0 auto;
+  font-size: 15px;
+  max-width: 255px;
+  line-height: 1.47;
+  letter-spacing: 0.75px;
+  text-align: center;
+  color: #212121;
+}
+
+.footer {
+  height: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__text {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 22px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #212121;
+}
